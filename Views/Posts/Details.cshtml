@@ -1,0 +1,32 @@
+@model Post
+
+@{
+    IEnumerable<Vote> upvotes = Model.Votes.Where(vote => vote.IsUpvote == true);
+    IEnumerable<Vote> downvotes = Model.Votes.Where(vote => vote.IsUpvote == false);
+}
+
+<div class="container">
+    <h1>Details for Post Id #@Model.PostId</h1>
+    <hr />
+
+    <h2>Author</h2>
+    <h5>By @Model.Author.FullName() on @Model.CreatedAt</h5>
+    <hr />
+
+    <h2>Topic</h2>
+    <h5>@Model.Topic</h5>
+    <hr />
+
+    <h2>Post</h2>
+    <p>@Model.Body</p>
+    <p>
+        Up Votes: (@upvotes.ToList().Count)
+        @String.Join(", ", upvotes.Select(vote => $"{vote.Voter.FirstName}").ToList())
+    </p>
+    
+    <p>
+        Down Votes: (@downvotes.ToList().Count)
+        @String.Join(", ", downvotes.Select(vote => $"{vote.Voter.FirstName}").ToList())
+    </p>
+
+</div>

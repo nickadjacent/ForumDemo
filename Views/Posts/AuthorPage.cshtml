@@ -1,0 +1,46 @@
+@model User
+
+<div class="container">
+
+    <h2 class="text-center">
+        @Model.FullName(): Member since @Model.CreatedAt
+    </h2>
+
+    <h3 class="text-center">
+        @Model.Posts.Count total posts authored
+    </h3>
+    
+    <hr>
+
+    @foreach (Post post in Model.Posts)
+    {
+        <div class="card mb-3 text-center w-50 mx-auto">
+
+            <div class="card-header">
+                <h2>@post.Topic</h2>
+            </div>
+
+            <div class="card-body">
+                <p class="card-text">
+                    @post.Body
+                </p>
+            </div>
+
+            <p class="card-text">
+                <small class="text-muted">
+                    @post.CreatedAt
+                </small>
+            </p>
+
+            <small class="text-muted">
+                <a
+                    asp-controller="Posts"
+                    asp-action="Details"
+                    asp-route-id="@post.PostId">
+                    Details
+                </a>
+            </small>
+
+        </div>
+    }
+</div>

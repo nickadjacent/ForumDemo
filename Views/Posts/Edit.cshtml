@@ -1,0 +1,33 @@
+@model Post
+
+<h2 class="text-center">Edit Post Id# @Model.PostId</h2>
+
+<form
+    asp-action="Update"
+    asp-controller="Posts"
+    asp-route-postId="@Model.PostId">
+
+    <div class="form-group">
+        <b><label asp-for="Topic"></label></b>
+        <span
+            class="text-danger font-weight-bold"
+            asp-validation-for="Topic"
+        ></span>
+        <input class="form-control" asp-for="Topic" />
+    </div>
+
+    <div class="form-group">
+        <b><label asp-for="Body"></label></b>
+        <span
+            class="text-danger font-weight-bold"
+            asp-validation-for="Body"
+        ></span>
+        <textarea class="form-control" asp-for="Body">
+            @Model.Body
+        </textarea>
+    </div>
+
+    <button class="btn btn-info" type="submit">Save</button>
+    <a class="btn btn-danger" asp-controller="Posts" asp-action="All">Cancel</a>
+    
+</form>

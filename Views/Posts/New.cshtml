@@ -1,0 +1,21 @@
+@model Post
+
+<h2 class="text-center">New Post</h2>
+
+<form asp-action="Create" asp-controller="Posts" method="POST">
+
+    <div class="form-group">
+        <label asp-for="Topic"></label>
+        <span class="text-danger font-weight-bold" asp-validation-for="Topic"></span>
+        <input class="form-control" asp-for="Topic" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Body"></label>
+        <span class="text-danger font-weight-bold" asp-validation-for="Body"></span>
+        <textarea class="form-control" asp-for="Body"></textarea>
+    </div>
+
+    <button class="btn btn-info" type="submit">Create Post</button>
+    
+</form>
