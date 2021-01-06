@@ -22,7 +22,6 @@
 /Users/cthulhu/Documents/Dojo/C#/ORM/ForumDemo/obj/Debug/netcoreapp2.2/ForumDemo.csproj.CopyComplete
 /Users/cthulhu/Documents/Dojo/C#/ORM/ForumDemo/bin/Debug/netcoreapp2.2/appsettings.Development.json
 /Users/cthulhu/Documents/Dojo/C#/ORM/ForumDemo/bin/Debug/netcoreapp2.2/appsettings.json
-/Users/cthulhu/Documents/Dojo/C#/ORM/ForumDemo/bin/Debug/netcoreapp2.2/Properties/launchSettings.json
 /Users/cthulhu/Documents/Dojo/C#/ORM/ForumDemo/obj/Debug/netcoreapp2.2/Razor/Views/Home/Index.cshtml.g.cs
 /Users/cthulhu/Documents/Dojo/C#/ORM/ForumDemo/obj/Debug/netcoreapp2.2/Razor/Views/Home/Privacy.cshtml.g.cs
 /Users/cthulhu/Documents/Dojo/C#/ORM/ForumDemo/obj/Debug/netcoreapp2.2/Razor/Views/Home/_Login.cshtml.g.cs
